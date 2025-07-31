@@ -46,3 +46,9 @@ async def custom_404_handler(request: Request, exc: StarletteHTTPException):
                 </body>
             </html>
             """,
+            status_code=404
+        )
+    return JSONResponse(
+        status_code=exc.status_code,
+        content={"message": exc.detail},
+    )
