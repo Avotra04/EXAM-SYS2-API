@@ -1,3 +1,7 @@
+from fastapi import FastAPI, Response, status
+from fastapi.requests import Request
+
+app = FastAPI()
 
 posts_db = []
 
